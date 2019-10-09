@@ -20,18 +20,25 @@
 </template>
 
 <script type="text/ecmascript-6">
-import { avatarConfig, ideas } from 'utils/wanted.conf'
+import { avatarConfig, codeUrls } from 'utils/wanted.conf'
 import VAvatar from 'components/avatar/index.vue'
+
+const DEFAULT_CODE_URL = 'https://codesandbox.io/'
 
 export default {
   data() {
     return {
-      ideas,
+      codeUrls,
       avatarConfig,
       selected: 0
     }
   },
-  mounted() {
+  watch: {
+    $route(newName, oldName) {
+      if (newName !== oldName && this.isWantedItem) {
+        this.avatarChange(0, 'johninch')
+      }
+    }
   },
   computed: {
     isWantedItem() {
@@ -41,14 +48,18 @@ export default {
   methods: {
     avatarChange(index, name) {
       const { mdBasePath, ideasIndex } = this.$route.query
-      const codeUrl = this.ideas[ideasIndex][name].codeUrl
+      const codeUrl = this.codeUrls[ideasIndex][name] || DEFAULT_CODE_URL
       const md = mdBasePath + '/' + name + '.md'
 
       this.selected = index
       this.$emit('avatarChange', this.getMarkdown(md), codeUrl)
     },
     getMarkdown(md) {
-      return require(`md/${md}`)
+      try {
+        return require(`md/${md}`)
+      } catch (err) {
+        return require('md/404.md')
+      }
     }
   },
   components: {

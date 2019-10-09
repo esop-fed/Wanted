@@ -22,27 +22,31 @@ export default {
   },
   data() {
     return {
-      split: 0.5,
+      loading: false,
       selected: 0
     }
-  },
-  mounted() {
-    console.log('md', this.md)
-  },
-  computed: {},
-  methods: {
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.demo-spin-icon-load{
+    animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
+.demo-spin-col{
+  height: 100px;
+  position: relative;
+  border: 1px solid #eee;
+}
 .main{
   display: flex;
   height: 100%;
   overflow: hidden;
-
-  .left, .right{
-  }
 
   .left{
     flex: 1 1 35%;

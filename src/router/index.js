@@ -9,7 +9,7 @@ const router = new Router({
     {
       path: '/',
       name: 'app',
-      redirect: { name: 'wanted' }
+      redirect: { name: 'wantedNav' }
     },
     {
       path: '/home',

@@ -1,51 +1,3 @@
-export const wanted = [
-  {
-    title: '搭建一个简易的node服务并写一个接口',
-    router: {
-      path: '/wanted/1',
-      query: {
-        mdBasePath: '2010_10_09',
-        ideasIndex: 0
-      }
-    },
-    profile: '旨在学会node的一些api使用，和简单的服务器搭建，打通前端的知识壁垒。',
-    date: '2019/10/01'
-  },
-  {
-    title: 'Leon:The Professional',
-    router: {
-      path: '/wanted/2',
-      query: {
-        mdBasePath: '2010_10_010',
-        ideasIndex: 1
-      }
-    },
-    profile: '旨在学会node的一些api使用，和简单的服务器搭建，打通前端的知识壁垒。',
-    date: '2019/10/01',
-    ideasKey: '2'
-  }
-]
-
-export const ideas = [
-  {
-    johninch: {
-      codeUrl: 'https://baidu.com'
-    },
-    dannisi: {
-      codeUrl: 'https://baidu.com'
-    },
-    niannings: {
-      codeUrl: 'https://baidu.com'
-    },
-    Xmtd: {
-      codeUrl: 'https://baidu.com'
-    },
-    febcat: {
-      codeUrl: 'https://codesandbox.io/embed/vue-template-mxpze?fontsize=14'
-    }
-  }
-]
-
 export const avatarConfig = [
   {
     name: 'johninch',
@@ -76,5 +28,30 @@ export const avatarConfig = [
     src: 'https://avatars0.githubusercontent.com/u/19603773?s=60&v=4',
     color: '',
     bg: ''
+  }
+]
+
+export const wanted = [
+  {
+    title: '搭建一个简易的node服务并写一个接口',
+    router: {
+      path: '/wanted/1',
+      query: {
+        mdBasePath: '2010_10_09',
+        ideasIndex: 0
+      }
+    },
+    profile: '旨在学会node的一些api使用，和简单的服务器搭建，打通前端的知识壁垒。',
+    date: '2019/10/01'
+  }
+]
+
+export const codeUrls = [
+  {
+    johninch: '',
+    dannisi: '',
+    niannings: '',
+    Xmtd: '',
+    febcat: 'https://codesandbox.io/embed/vue-template-mxpze'
   }
 ]
