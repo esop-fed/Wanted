@@ -33,16 +33,16 @@ export const avatarConfig = [
 
 export const wanted = [
   {
-    title: '搭建一个简易的node服务并写一个接口',
+    title: 'PWA(Progressive Web Apps)',
     router: {
       path: '/wanted/1',
       query: {
-        mdBasePath: '2010_10_09',
+        mdBasePath: 'pwa',
         ideasIndex: 0
       }
     },
-    profile: '旨在学会node的一些api使用，和简单的服务器搭建，打通前端的知识壁垒。',
-    date: '2019/10/01'
+    profile: '旨在熟悉service work以及Web App Manifest等概念，了解明白从0到1的过程',
+    date: '2019/10/10'
   }
 ]
 

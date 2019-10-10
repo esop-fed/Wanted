@@ -10,6 +10,9 @@ function resolve(dir) {
 module.exports = {
   entry: 'src/index',
   chainWebpack(config) {
+    config.output
+      .path(resolve('docs'))
+      .publicPath('/Wanted/')
     config.resolve.alias
       .set('modules', resolve('src/modules'))
       .set('assets', resolve('src/assets'))
