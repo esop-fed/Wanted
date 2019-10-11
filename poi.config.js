@@ -3,16 +3,19 @@ const marked = require('marked')
 const renderer = new marked.Renderer()
 const highlight = require('highlight.js')
 
+const idDev = process.env.NODE_ENV === 'development'
+
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
 module.exports = {
   entry: 'src/index',
+  output: {
+    dir: resolve('docs'),
+    publicUrl: idDev ? '/' : '/Wanted/'
+  },
   chainWebpack(config) {
-    config.output
-      .path(resolve('docs'))
-      .publicPath('/Wanted/')
     config.resolve.alias
       .set('modules', resolve('src/modules'))
       .set('assets', resolve('src/assets'))
