@@ -1,4 +1,5 @@
 # wanted
+> 预览地址 https://esop-fed.github.io/Wanted
 
 > Created by [create-poi-app](https://poi.js.org).
 
