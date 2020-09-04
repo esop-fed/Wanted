@@ -32,7 +32,7 @@
     "highlight.js": "^9.15.10",
     "html-loader": "^0.5.5",
     "markdown-loader": "^5.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "poi": "^12.7.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
